@@ -1,11 +1,5 @@
-.App {
-  text-align: center;
-  font-size: 35px;
-  margin-top: 20%;
-}
-
-.App-title {
-  font-size: 50px;
+body {
+  background: #38bbd7;
 }
 
 .clock, .time {
