@@ -1,39 +1,40 @@
 import React, { Component } from 'react';
-import Clock from './Clock';
+import { Grid, Header } from 'semantic-ui-react';
+
+import Countdown from './Countdown';
 import StopWatch from './StopWatch';
-import './App.css';
-import { Form, FormControl, Button } from 'react-bootstrap';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      deadline: 'December 25, 2017',
-      newDeadline: ''
-    }
-  }
-
-  changeDeadline() {
-    this.setState({deadline: this.state.newDeadline});
-  }
-
   render() {
     return (
-      <div className='App'>
-        <div className='App-title'>Countdown to {this.state.deadline}</div>
-        <Clock
-          deadline={this.state.deadline}
-        />
-        <Form inline>
-          <FormControl
-            className='deadline-input'
-            placeholder='new date'
-            onChange={event => this.setState({newDeadline: event.target.value})}
-          />
-          <Button onClick={()=> this.changeDeadline()}>Submit</Button>
-        </Form>
+      <div>
+        <style>
+          {`
+            body > div,
+            body > div > div {
+              height: 100%;
+            }
+          `}
+        </style>
+        <Grid
+          textAlign='center'
+          style={{ height: '100%' }}
+          verticalAlign='middle'
+        >
+          <Grid.Column style={{ maxWidth: 450 }}>
+            <Header
+              as='h1'
+              style={{ color: 'white', fontSize: '45px' }}
+              textAlign='center'
+            >
+              Countdown Champ
+            </Header>
 
-        <StopWatch />
+            <Countdown />
+            <StopWatch />
+
+          </Grid.Column>
+        </Grid>
       </div>
     )
   }
