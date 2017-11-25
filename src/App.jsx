@@ -3,6 +3,7 @@ import { Grid, Header } from 'semantic-ui-react';
 
 import Countdown from './Countdown';
 import StopWatch from './StopWatch';
+import Github from './Github';
 
 class App extends Component {
   render() {
@@ -35,6 +36,8 @@ class App extends Component {
 
           </Grid.Column>
         </Grid>
+
+        <Github />
       </div>
     )
   }
