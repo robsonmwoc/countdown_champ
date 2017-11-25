@@ -1,8 +1,9 @@
 body {
   background: #38bbd7;
 }
-
 .clock, .time {
+  font-size: 18px;
+  font-weight: bold;
   display: inline;
   margin: 10px;
 }

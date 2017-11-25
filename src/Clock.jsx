@@ -39,8 +39,8 @@ class Clock extends Component {
       <div>
         <div className='clock'>{this.leadingZero(this.state.days)} days</div>
         <div className='clock'>{this.leadingZero(this.state.hours)} hours</div>
-        <div className='clock'>{this.leadingZero(this.state.minutes)} minutes</div>
-        <div className='clock'>{this.leadingZero(this.state.seconds)} seconds</div>
+        <div className='clock'>{this.leadingZero(this.state.minutes)} mins</div>
+        <div className='clock'>{this.leadingZero(this.state.seconds)} secs</div>
       </div>
     )
   }

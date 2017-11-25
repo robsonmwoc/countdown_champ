@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Segment, Button, Header, Divider } from 'semantic-ui-react';
 
 class StopWatch extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class StopWatch extends Component {
     this.setState({ ticking: true });
   }
 
-  stop() {
+  pause() {
     this.setState({ ticking: false });
   }
 
@@ -48,21 +48,39 @@ class StopWatch extends Component {
 
   render() {
     return(
-      <div className='stopwatch'>
+      <Segment stacked>
+        <Header
+          as='h2'
+          style={{ color: 'teal' }}
+          textAlign='center'
+        >
+          Stopwatch
+        </Header>
+
         <div>
           <div className='time'>{this.leadingZero(this.state.minutes)}</div>:
           <div className='time'>{this.leadingZero(this.state.seconds)}</div>:
           <div className='time'>{this.leadingZero(this.state.miliseconds)}</div>
         </div>
-        <div className='controls'>
-          <Button onClick={() => this.start()} bsStyle='success'>
-            Start
-          </Button>&nbsp;
-          <Button onClick={() => this.stop()} bsStyle='danger'>
-            Stop
-          </Button>
-        </div>
-      </div>
+
+        <Divider />
+        <Button
+          color='green'
+          content='Start'
+          icon='play'
+          size='large'
+          labelPosition='left'
+          onClick={()=> this.start()}
+        />
+
+        <Button
+          content='Pause'
+          icon='pause'
+          size='large'
+          labelPosition='right'
+          onClick={()=> this.pause()}
+        />
+      </Segment>
     )
   }
 }
