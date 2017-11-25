@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 20%;
+}
+
+.App-title {
+  font-size: 50px;
+}
+
+.clock, .time {
+  display: inline;
+  margin: 10px;
+}
+
+.deadline-input {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.stopwatch {
+  background: #38bbd7;
+  padding: 15px;
+}
+
+.time {
+  border: solid #454545 2px;
+  padding: 5px;
+  border-radius: 7px;
+}
