@@ -7,7 +7,7 @@ export default class Github extends Component {
       <div className='github-button'>
         <Button
           as='a'
-          href='#'
+          href='https://github.com/robsonmwoc/countdown_champ'
           color='secondary'
           icon='github'
           content='View Source'
